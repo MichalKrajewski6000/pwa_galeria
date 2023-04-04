@@ -1,11 +1,11 @@
 <template>
   <div class="thumb">
     <img
-      :src="item"
-      v-for="(item, index) in images"
-      :key="index"
+      v-for="item in images"
+      :src="item.url"
+      :key="item.id"
       class="image"
-      @click="passImage(item)"
+      @click="passImage(item.id)"
     />
   </div>
 </template>
@@ -24,8 +24,8 @@ export default {
   },
 
   methods: {
-    passImage(url) {
-      this.$emit("selectedImg", url);
+    passImage(id) {
+      this.$emit("selectedImg", id);
     },
   },
 };
