@@ -3,12 +3,20 @@
     <NuxtLink class="nav-item" to="/">Strona Główna</NuxtLink>
     <NuxtLink class="nav-item" to="/gallery">Galeria</NuxtLink>
     <NuxtLink class="nav-item" to="/about">O nas</NuxtLink>
+    <NuxtLink class="nav-item" :to="'/cayde/' + name">Cayde-6</NuxtLink>
+    <NuxtLink class="nav-item" to="/nasa">Nasa</NuxtLink>
   </div>
 </template>
 
 <script>
 export default {
   name: "NavPage",
+
+  data() {
+    return {
+      name: "cayde",
+    };
+  },
 };
 </script>
 <style scoped>

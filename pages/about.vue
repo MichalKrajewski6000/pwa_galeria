@@ -1,6 +1,5 @@
 <template>
   <div>
-    <TopNav />
     <h1 class="colorRed">About</h1>
     <button @click="showInfo">Click this button</button>
   </div>
